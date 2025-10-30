@@ -20,9 +20,23 @@ During installation, the C code is compiled using the settings in [`src/eig3x3/_
 ## Usage
 
 Import the main functions in Python:
-
 ```python
+import numpy as np
 from eig3x3 import eigvals, eigvalss
+
+# Example: real diagonalizable 3x3 matrix
+matrix = np.array([
+    [1.0, 2.0, 3.0],
+    [0.0, 4.0, 5.0],
+    [0.0, 0.0, 6.0]
+])
+
+# Example: real symmetric 3x3 matrix
+symmetric_matrix = np.array([
+    [2.0, -1.0, 0.0],
+    [-1.0, 2.0, -1.0],
+    [0.0, -1.0, 2.0]
+])
 
 # For real, diagonalizable 3x3 matrices
 eigenvalues = eigvals(matrix)
