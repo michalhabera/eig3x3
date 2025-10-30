@@ -17,14 +17,18 @@ python3 -m pip install .
 ```
 
 During installation, the C code is compiled using the settings in [`src/eig3x3/_build_cffi.py`](src/eig3x3/_build_cffi.py). You can modify compiler flags or other build options in that file before installing to customize the build process.
-
 ## Usage
 
 Import the main functions in Python:
 
 ```python
-from eig3x3 import eigvals
+from eig3x3 import eigvals, eigvalss
+
+# For real, diagonalizable 3x3 matrices
 eigenvalues = eigvals(matrix)
+
+# For real, symmetric 3x3 matrices (faster and more stable)
+eigenvalues_symmetric = eigvalss(symmetric_matrix)
 ```
 
 See the benchmarks and tests for more usage examples.
