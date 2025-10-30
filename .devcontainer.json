@@ -1,0 +1,31 @@
+{
+    "name": "eig3x3",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "charliermarsh.ruff",
+                "gitlab.gitlab-workflow",
+                "tamasfe.even-better-toml",
+                "xaver.clang-format"
+            ],
+            "settings": {
+                "editor.defaultFormatter": "charliermarsh.ruff",
+                "editor.formatOnSave": true,
+                "editor.codeActionsOnSave": {
+                    "source.organizeImports": "explicit",
+                    "source.fixAll": "explicit"
+                },
+                "remote.autoForwardPorts": false,
+                "[c]": {
+                    "editor.defaultFormatter": "xaver.clang-format"
+                }
+            }
+        }
+    },
+    "image": "mcr.microsoft.com/devcontainers/python:3.14-trixie",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {}
+    },
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y clang-format && python -m pip install --editable .[dev] -v"
+}

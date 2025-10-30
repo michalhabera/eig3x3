@@ -1,0 +1,41 @@
+[build-system]
+requires = ["cffi", "setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eig3x3"
+version = "0.1.0"
+description = "Eigenvalues of 3x3 matrices"
+authors = [
+    { name = "Michal Habera", email = "michal.habera@uni.lu" },
+    { name = "Andreas Zilian", email = "andreas.zilian@uni.lu" },
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["numpy", "matplotlib", "cffi", "scipy", "mpmath"]
+
+[project.optional-dependencies]
+dev = ["ruff", "pytest", "pdbpp"]
+
+# tools
+[tool.ruff]
+line-length = 120
+indent-width = 4
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle
+    "W",   # pycodestyle
+    "F",   # pyflakes
+    "I",   # isort - use standalone isort
+    "RUF", # Ruff-specific rules
+    "UP",  # pyupgrade
+    "ICN", # flake8-import-conventions
+    "NPY", # numpy-specific rules
+    "FLY", # use f-string not static joins
+]
+ignore = ["UP007", "RUF012"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["eig3x3"]
+known-third-party = ["sympy", "numpy"]
