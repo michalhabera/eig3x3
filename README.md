@@ -1,6 +1,7 @@
 # Numerically stable eigenvalues of 3x3 matrices
 
 This repository provides efficient and numerically stable routines for computing the eigenvalues of 3x3 matrices. The implementation includes Python and C code, with Python bindings via CFFI.
+Theoretical background of the algorithms is explained in the arXiv preprint "Numerically stable evaluation of closed-form expressions for eigenvalues of $3 \times 3$ matrices", see https://arxiv.org/abs/2511.00292.
 
 ## Features
 

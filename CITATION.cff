@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Habera"
+  given-names: "Michal"
+  orcid: "https://orcid.org/0000-0003-0604-8884"
+- family-names: "Zilian"
+  given-names: "Andreas"
+  orcid: "https://orcid.org/0000-0002-4228-4465"
+title: "Numerically stable evaluation of closed-form expressions for eigenvalues of 3×3 matrices"
+doi: 10.48550/arXiv.2511.00292
+date-released: 2025-31-10
+url: "https://arxiv.org/abs/2511.00292"
