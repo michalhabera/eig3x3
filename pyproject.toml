@@ -28,6 +28,9 @@ benchmarks = ["matplotlib", "scipy", "mpmath"]
 package-dir = {"" = "src"}
 packages = ["eig3x3", "eig3x3.c"]
 
+[tool.setuptools.package-data]
+"eig3x3.c" = ["src/eig3x3/c/eig3x3.h"]
+
 [tool.ruff]
 line-length = 120
 indent-width = 4
