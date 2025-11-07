@@ -1,5 +1,5 @@
 [build-system]
-requires = ["cffi", "setuptools>=64"]
+requires = ["cffi", "setuptools>=77.0.3"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -12,12 +12,18 @@ authors = [
 ]
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = ["numpy", "matplotlib", "cffi", "scipy", "mpmath"]
+dependencies = ["numpy", "cffi"]
+license = "MIT"
+license-files = ["LICENSE.md"]
+
+[project.urls]
+Homepage = "https://github.com/michalhabera/eig3x3"
+Repository = "https://github.com/michalhabera/eig3x3"
 
 [project.optional-dependencies]
 dev = ["ruff", "pytest", "pdbpp"]
+benchmarks = ["matplotlib", "scipy", "mpmath"]
 
-# tools
 [tool.ruff]
 line-length = 120
 indent-width = 4
