@@ -24,6 +24,10 @@ Repository = "https://github.com/michalhabera/eig3x3"
 dev = ["ruff", "pytest", "pdbpp"]
 benchmarks = ["matplotlib", "scipy", "mpmath"]
 
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["eig3x3", "eig3x3.c"]
+
 [tool.ruff]
 line-length = 120
 indent-width = 4
